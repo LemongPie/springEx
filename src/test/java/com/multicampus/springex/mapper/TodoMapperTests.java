@@ -1,6 +1,8 @@
 package com.multicampus.springex.mapper;
 
 import com.multicampus.springex.domain.TodoVO;
+import com.multicampus.springex.dto.PageRequestDTO;
+import com.multicampus.springex.dto.PageResponseDTO;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -42,6 +44,27 @@ public class TodoMapperTests {
         for(TodoVO vo : voList){
             log.info(vo);
         }
+    }
+    @Test
+    public void testSelectOne(){
+        TodoVO todovo= todoMapper.selectOne(1L);
+        log.info(todovo);
+    }
+    @Test
+    public void testSelectList(){
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder()
+                .page(1).size(10).build();
+        List<TodoVO>voList = todoMapper.selectList(pageRequestDTO);
+        voList.forEach(vo->log.info(vo));
+    }
+    @Test
+    public void testPaging(){
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder()
+                .page(1)
+                .size(10)
+                .build();
+//        PageResponseDTO responseDTO = todoService.getList(pageRequestDTO);
+//        voList.forEach(vo-> log.info(vo));
     }
 }
 

@@ -5,9 +5,7 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1> FrontController 가 응답결과 입니다.
-</h1>
 <br/>
-
+<a href ="/todo/register">Todo글 작성하러 가기</a>
 </body>
 </html>

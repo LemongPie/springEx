@@ -19,11 +19,11 @@
         <property name="formatters">
             <set>
                 <bean class="com.multicampus.springex.controller.formatter.LocalDateFormatter"/>
-                <!--<bean class="com.multicampus.springex.controller.formatter.CheckboxFormatter"/>-->
+                <bean class="com.multicampus.springex.controller.formatter.CheckboxFormatter"/>
             </set>
         </property>
     </bean>
-    <!--conversionService라는 빈을 등록한 후 스프링MVC를 처리할때 mvc : annotation-driven 설정을 반드시 해줘야 한다-->
+
     <mvc:annotation-driven  conversion-service="conversionService" />
 
 </beans>

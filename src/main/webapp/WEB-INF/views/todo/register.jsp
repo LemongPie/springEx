@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; UTF-8" pageEncoding="UTF-8" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,52 +32,45 @@
             </nav>
         </div>
     </div>
-    <div class="row content">
-        <div class="row content">
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        Featured
-                    </div>
-                    <div class="card-body">
-                        <form action="/todo/register" method="post">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Title</span>
-                                <input type="text" name="title" class="form-control" placeholder="Title">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">DueDate</span>
-                                <input type="date" name="dueDate" class="form-control" placeholder="Duedate">
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">Title</span>
-                                <input type="text" name="title" class="form-control" placeholder="Writer">
-                            </div>
-
-                            <div class="my-4">
-                                <div class="float-end">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>
+       <div class="row content">
+                  <div class="row content">
+               <div class="col">
+                   <div class="card">
+                       <div class="card-header">
+                           Featured
+                       </div>
+                       <div class="card-body">
+                           <form action="/todo/register" method="post">
+                               <div class="input-group mb-3">
+                                  <span class="input-group-text">Title</span>
+                                  <input type="text" name="title" class="form-control" placeholder="Title">
                                 </div>
-                            </div>
+
+                               <div class="input-group mb-3">
+                                   <span class="input-group-text">DueDate</span>
+                                   <input type="date" name="dueDate" class="form-control" placeholder="Duedate">
+                               </div>
+
+                               <div class="input-group mb-3">
+                                   <span class="input-group-text">Title</span>
+                                   <input type="text" name="title" class="form-control" placeholder="Writer">
+                               </div>
+
+                               <div class="my-4">
+                                   <div class="float-end">
+                                       <button type="submit" class="btn btn-primary">Submit</button>
+                                       <button type="reset" class="btn btn-secondary">Reset</button>
+                                   </div>
+                               </div>
 
 
-                        </form>
-                        <script>
-                            const serverValidResult ={}
-                            <c:forEach items ="${errors}">
-                            serverValidResult['${err.getField()}'] ='${error.defaultMessage}'
+                           </form>
 
-                            </c:forEach>
-                            console.log(serverValidResult)
-                        </script>
 
-                    </div>
-                </div>
-            </div>
-        </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
     </div>
     <div class="row footer">
         <!--<h1>Footer</h1>-->
